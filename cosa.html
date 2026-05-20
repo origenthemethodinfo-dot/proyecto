@@ -1,0 +1,277 @@
+export default function OrigenLesson1() {
+  const vocab = [
+    {
+      emoji: '🪑',
+      definite: 'la silla',
+      indefinite: 'una silla',
+      enDefinite: 'the chair',
+      enIndefinite: 'a chair',
+    },
+    {
+      emoji: '🟫',
+      definite: 'la mesa',
+      indefinite: 'una mesa',
+      enDefinite: 'the table',
+      enIndefinite: 'a table',
+    },
+    {
+      emoji: '📚',
+      definite: 'el libro',
+      indefinite: 'un libro',
+      enDefinite: 'the book',
+      enIndefinite: 'a book',
+    },
+    {
+      emoji: '🚪',
+      definite: 'la puerta',
+      indefinite: 'una puerta',
+      enDefinite: 'the door',
+      enIndefinite: 'a door',
+    },
+    {
+      emoji: '🪟',
+      definite: 'la ventana',
+      indefinite: 'una ventana',
+      enDefinite: 'the window',
+      enIndefinite: 'a window',
+    },
+    {
+      emoji: '🖊️',
+      definite: 'el bolígrafo',
+      indefinite: 'un bolígrafo',
+      enDefinite: 'the pen',
+      enIndefinite: 'a pen',
+    },
+    {
+      emoji: '💡',
+      definite: 'la luz',
+      indefinite: 'una luz',
+      enDefinite: 'the light',
+      enIndefinite: 'a light',
+    },
+    {
+      emoji: '📱',
+      definite: 'el teléfono',
+      indefinite: 'un teléfono',
+      enDefinite: 'the phone',
+      enIndefinite: 'a phone',
+    },
+  ]
+
+  const verbs = [
+    ['yo soy', 'I am'],
+    ['tú eres', 'you are'],
+    ['él es', 'he is'],
+    ['yo estoy', 'I am'],
+    ['tú estás', 'you are'],
+    ['él está', 'he is'],
+    ['me llamo', 'my name is'],
+    ['te llamas', 'your name is'],
+    ['se llama', 'his/her name is'],
+  ]
+
+  const newItems = [
+    ['mi silla', 'my chair'],
+    ['tu silla', 'your chair'],
+    ['su silla', 'his/her chair'],
+    ['mi libro', 'my book'],
+    ['tu mesa', 'your table'],
+    ['su ventana', 'his/her window'],
+  ]
+
+  const finalGym = [
+    ['That is a chair.', 'Eso es una silla.'],
+    ['That is not a chair.', 'Eso no es una silla.'],
+    ['Is that a chair?', '¿Eso es una silla?'],
+    ['That is the chair.', 'Eso es la silla.'],
+    ['That is not the chair.', 'Eso no es la silla.'],
+    ['Is that the chair?', '¿Eso es la silla?'],
+    ['That is a table.', 'Eso es una mesa.'],
+    ['That is not a table.', 'Eso no es una mesa.'],
+    ['Is that a table?', '¿Eso es una mesa?'],
+    ['That is the table.', 'Eso es la mesa.'],
+    ['That is a book.', 'Eso es un libro.'],
+    ['Is that a book?', '¿Eso es un libro?'],
+    ['That is the book.', 'Eso es el libro.'],
+    ['That is a window.', 'Eso es una ventana.'],
+    ['Is that a window?', '¿Eso es una ventana?'],
+    ['That is not a window.', 'Eso no es una ventana.'],
+    ['That is a door.', 'Eso es una puerta.'],
+    ['That is not a door.', 'Eso no es una puerta.'],
+    ['Is that a door?', '¿Eso es una puerta?'],
+    ['That is the door.', 'Eso es la puerta.'],
+    ['My chair.', 'Mi silla.'],
+    ['Your chair.', 'Tu silla.'],
+    ['His chair.', 'Su silla.'],
+    ['My book.', 'Mi libro.'],
+    ['Your table.', 'Tu mesa.'],
+    ['His window.', 'Su ventana.'],
+    ['Is that my chair?', '¿Eso es mi silla?'],
+    ['No, that is your chair.', 'No, eso es tu silla.'],
+    ['Is that his book?', '¿Eso es su libro?'],
+    ['Yes, that is my table.', 'Sí, eso es mi mesa.'],
+  ]
+
+  return (
+    <div className="min-h-screen bg-stone-100 p-8 text-slate-800">
+      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-stone-200">
+        <header className="bg-gradient-to-r from-orange-100 to-amber-100 p-8 border-b border-stone-200">
+          <h1 className="text-5xl font-black">Lesson 1</h1>
+        </header>
+
+        <main className="p-8 space-y-12">
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">📚 Vocabulary</h2>
+              <div className="bg-orange-100 text-orange-800 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 1 🎧
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-5">
+              {vocab.map((item) => (
+                <div
+                  key={item.definite}
+                  className="bg-white rounded-3xl border border-stone-200 p-6 shadow-sm text-center"
+                >
+                  <div className="text-5xl mb-4">{item.emoji}</div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <p className="font-bold text-xl">{item.definite}</p>
+                      <p className="text-slate-500 text-sm">{item.enDefinite}</p>
+                    </div>
+
+                    <div>
+                      <p className="font-bold text-xl">{item.indefinite}</p>
+                      <p className="text-slate-500 text-sm">{item.enIndefinite}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">🧩 Verbs</h2>
+              <div className="bg-orange-100 text-orange-800 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 2 🎧
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {verbs.map((item) => (
+                <div
+                  key={item[0]}
+                  className="bg-white rounded-3xl border border-stone-200 p-6 shadow-sm text-center"
+                >
+                  <p className="text-2xl font-bold">{item[0]}</p>
+                  <p className="text-slate-500 mt-2">{item[1]}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="bg-orange-50 rounded-3xl p-8 border border-orange-100">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">✅ Affirmative</h2>
+              <div className="bg-white text-orange-700 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 3 🎧
+              </div>
+            </div>
+
+            <div className="space-y-3 text-xl">
+              <p>Eso es una silla. → That is a chair.</p>
+              <p>Eso es la silla. → That is the chair.</p>
+              <p>Eso es un libro. → That is a book.</p>
+              <p>Eso es el libro. → That is the book.</p>
+              <p>Eso es mi silla. → That is my chair.</p>
+            </div>
+          </section>
+
+          <section className="bg-red-50 rounded-3xl p-8 border border-red-100">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">❌ Negative</h2>
+              <div className="bg-white text-red-700 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 4 🎧
+              </div>
+            </div>
+
+            <div className="space-y-3 text-xl">
+              <p>Eso no es una silla. → That is not a chair.</p>
+              <p>Eso no es la silla. → That is not the chair.</p>
+              <p>Eso no es un libro. → That is not a book.</p>
+              <p>Eso no es mi silla. → That is not my chair.</p>
+              <p>Eso no es tu mesa. → That is not your table.</p>
+            </div>
+          </section>
+
+          <section className="bg-yellow-50 rounded-3xl p-8 border border-yellow-100">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">❓ Questions</h2>
+              <div className="bg-white text-yellow-700 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 5 🎧
+              </div>
+            </div>
+
+            <div className="space-y-3 text-xl">
+              <p>¿Eso es una silla? → Is that a chair?</p>
+              <p>¿Eso es la silla? → Is that the chair?</p>
+              <p>¿Eso es un libro? → Is that a book?</p>
+              <p>¿Eso es mi silla? → Is that my chair?</p>
+              <p>¿Eso es su ventana? → Is that his/her window?</p>
+            </div>
+          </section>
+
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">✨ New Items</h2>
+              <div className="bg-orange-100 text-orange-800 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 6 🎧
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {newItems.map((item) => (
+                <div
+                  key={item[0]}
+                  className="bg-white rounded-3xl border border-stone-200 p-6 shadow-sm text-center"
+                >
+                  <p className="text-2xl font-bold">{item[0]}</p>
+                  <p className="text-slate-500 mt-2">{item[1]}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-4xl font-black">🏋️ Final Gym</h2>
+              <div className="bg-orange-100 text-orange-800 px-5 py-3 rounded-full font-bold text-sm shadow-sm">
+                AUDIO 7 🎧
+              </div>
+            </div>
+
+            <div className="bg-stone-50 rounded-3xl border border-stone-200 overflow-hidden">
+              <div className="grid grid-cols-2 bg-orange-100 font-bold text-lg">
+                <div className="p-5 border-r border-orange-200">English</div>
+                <div className="p-5">Español</div>
+              </div>
+
+              {finalGym.map((item, index) => (
+                <div
+                  key={index}
+                  className="grid grid-cols-2 border-t border-stone-200 text-lg"
+                >
+                  <div className="p-4 border-r border-stone-200">{item[0]}</div>
+                  <div className="p-4">{item[1]}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  )
+}

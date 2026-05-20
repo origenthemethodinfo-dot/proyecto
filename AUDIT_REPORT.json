@@ -1,0 +1,553 @@
+{
+  "summary": {
+    "totalLessons": 50,
+    "totalIssues": 66,
+    "literalTranslations": 14,
+    "wrongEmojis": 52,
+    "missingDrillPatterns": 0,
+    "shortFinalGym": 0,
+    "duplicateVocabulary": 0,
+    "duplicateVerbs": 267
+  },
+  "duplicateVocabularyDetails": [],
+  "duplicateVerbsDetails": [
+    [
+      "paso",
+      2
+    ],
+    [
+      "apunto",
+      5
+    ],
+    [
+      "llamo",
+      2
+    ],
+    [
+      "hablo",
+      4
+    ],
+    [
+      "corto",
+      2
+    ],
+    [
+      "empeoro",
+      3
+    ],
+    [
+      "descanso",
+      4
+    ],
+    [
+      "busco",
+      3
+    ],
+    [
+      "preparo",
+      2
+    ],
+    [
+      "servo",
+      2
+    ],
+    [
+      "serves",
+      2
+    ],
+    [
+      "apuntas",
+      4
+    ],
+    [
+      "molesto",
+      2
+    ],
+    [
+      "molestas",
+      2
+    ],
+    [
+      "ordeno",
+      3
+    ],
+    [
+      "ordenas",
+      3
+    ],
+    [
+      "empeoras",
+      2
+    ],
+    [
+      "descansas",
+      2
+    ],
+    [
+      "apunta",
+      3
+    ],
+    [
+      "saludo",
+      2
+    ]
+  ],
+  "lessonsWithIssues": [
+    {
+      "id": "lesson-001",
+      "title": "Lección 1",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "producto",
+          "emoji": "📦"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "zapato",
+          "emoji": "👟"
+        },
+        {
+          "type": "literal_translation",
+          "noun": "ticket",
+          "en": "the ticket"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "ticket",
+          "emoji": "🎫"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "pantalón",
+          "emoji": "👖"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "mochila",
+          "emoji": "🎒"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "piso",
+          "emoji": "🏢"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "bolso",
+          "emoji": "👜"
+        }
+      ]
+    },
+    {
+      "id": "lesson-002",
+      "title": "Lección 2",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "vestido",
+          "emoji": "👗"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "cocina",
+          "emoji": "🍳"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "contrato",
+          "emoji": "📝"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "escalera",
+          "emoji": "🪜"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "bolsa",
+          "emoji": "👜"
+        }
+      ]
+    },
+    {
+      "id": "lesson-005",
+      "title": "Lección 5",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "línea",
+          "emoji": "📏"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "abrigo",
+          "emoji": "🧥"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "zona",
+          "emoji": "📍"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "artículo",
+          "emoji": "📰"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "horario",
+          "emoji": "⏰"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "servicio",
+          "emoji": "🔧"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "señal",
+          "emoji": "🚏"
+        }
+      ]
+    },
+    {
+      "id": "lesson-006",
+      "title": "Lección 6",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "llegada",
+          "emoji": "📍"
+        },
+        {
+          "type": "literal_translation",
+          "noun": "taxi",
+          "en": "the Taxi"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "parada",
+          "emoji": "🚏"
+        }
+      ]
+    },
+    {
+      "id": "lesson-007",
+      "title": "Lección 7",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "idea",
+          "en": "the idea"
+        }
+      ]
+    },
+    {
+      "id": "lesson-008",
+      "title": "Lección 8",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "lugar",
+          "emoji": "📍"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "estación",
+          "emoji": "🚉"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "velocidad",
+          "emoji": "⚡"
+        },
+        {
+          "type": "literal_translation",
+          "noun": "metro",
+          "en": "the metro"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "metro",
+          "emoji": "🚇"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "ropa",
+          "emoji": "👕"
+        }
+      ]
+    },
+    {
+      "id": "lesson-009",
+      "title": "Lección 9",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "verdura",
+          "emoji": "🥬"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "pescado",
+          "emoji": "🐟"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "taza",
+          "emoji": "☕"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "carne",
+          "emoji": "🥩"
+        }
+      ]
+    },
+    {
+      "id": "lesson-010",
+      "title": "Lección 10",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "chat",
+          "en": "the chat"
+        },
+        {
+          "type": "literal_translation",
+          "noun": "bar",
+          "en": "the bar"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "sal",
+          "emoji": "🧂"
+        }
+      ]
+    },
+    {
+      "id": "lesson-011",
+      "title": "Lección 11",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "libro",
+          "emoji": "📚"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "jardín",
+          "emoji": "🌳"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "suelo",
+          "emoji": "🪵"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "ascensor",
+          "emoji": "🛗"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "cuchara",
+          "emoji": "🥄"
+        }
+      ]
+    },
+    {
+      "id": "lesson-014",
+      "title": "Lección 14",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "resta",
+          "emoji": "➖"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "moneda",
+          "emoji": "🪙"
+        },
+        {
+          "type": "literal_translation",
+          "noun": "humor",
+          "en": "the humor"
+        }
+      ]
+    },
+    {
+      "id": "lesson-016",
+      "title": "Lección 16",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "vaso",
+          "emoji": "🥛"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "andén",
+          "emoji": "🚉"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "edificio",
+          "emoji": "🏢"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "garaje",
+          "emoji": "🚗"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "cuaderno",
+          "emoji": "📓"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "acera",
+          "emoji": "🚶"
+        }
+      ]
+    },
+    {
+      "id": "lesson-018",
+      "title": "Lección 18",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "cambio",
+          "emoji": "🔄"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "falda",
+          "emoji": "👗"
+        }
+      ]
+    },
+    {
+      "id": "lesson-019",
+      "title": "Lección 19",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "té",
+          "emoji": "🍵"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "sopa",
+          "emoji": "🍲"
+        }
+      ]
+    },
+    {
+      "id": "lesson-020",
+      "title": "Lección 20",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "favor",
+          "en": "the favor"
+        }
+      ]
+    },
+    {
+      "id": "lesson-021",
+      "title": "Lección 21",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "verano",
+          "emoji": "☀️"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "distancia",
+          "emoji": "📏"
+        },
+        {
+          "type": "literal_translation",
+          "noun": "terminal",
+          "en": "the terminal"
+        },
+        {
+          "type": "wrong_emoji",
+          "noun": "terminal",
+          "emoji": "🚉"
+        }
+      ]
+    },
+    {
+      "id": "lesson-024",
+      "title": "Lección 24",
+      "issues": [
+        {
+          "type": "wrong_emoji",
+          "noun": "huevo",
+          "emoji": "🥚"
+        }
+      ]
+    },
+    {
+      "id": "lesson-027",
+      "title": "Lección 27",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "check-in",
+          "en": "the check-in"
+        }
+      ]
+    },
+    {
+      "id": "lesson-030",
+      "title": "Lección 30",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "rumor",
+          "en": "the rumor"
+        }
+      ]
+    },
+    {
+      "id": "lesson-037",
+      "title": "Lección 37",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "control",
+          "en": "the control"
+        }
+      ]
+    },
+    {
+      "id": "lesson-046",
+      "title": "Lección 46",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "portal",
+          "en": "the portal"
+        }
+      ]
+    },
+    {
+      "id": "lesson-049",
+      "title": "Lección 49",
+      "issues": [
+        {
+          "type": "literal_translation",
+          "noun": "trauma",
+          "en": "the trauma"
+        }
+      ]
+    }
+  ]
+}
