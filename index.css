@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #3A3A3A;
+  background: #F5F0E8;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Abril Fatface', serif;
+  font-weight: 400;
+}
