@@ -1,0 +1,1492 @@
+{
+  "metodo": "Metodo Origen",
+  "version": 3,
+  "descripcion": "Items gramaticales completos. 60 items definitivos. IT041 fusionado en IT021. IT050, IT061, IT063 eliminados como items (convertidos en criterios transversales). IT060 marcado como obligatorio B1.",
+
+  "decisiones_aplicadas": {
+    "IT041": "Fusionado con IT021. La diferencia tener_que/deber es de registro, no de estructura.",
+    "IT050": "Eliminado como item. Registro formal/informal es criterio transversal de todo el método.",
+    "IT061": "Eliminado como item. Matices emocionales son contenido del Gimnasio en lecciones B1.",
+    "IT063": "Eliminado como item. Reformulación es lección especial de estrategias comunicativas.",
+    "IT060": "Mantenido como item OBLIGATORIO en Bloque B1. Fundamental para naturalidad."
+  },
+
+  "criterios_transversales": {
+    "registro": "Cada lección introduce variantes formales e informales del mismo chunk cuando sea relevante.",
+    "naturalidad": "Ninguna frase del método puede ser semánticamente absurda. Filtro activo en toda generación de contenido.",
+    "matices_emocionales": "Las últimas lecciones del Bloque B1 incluyen secciones de Gimnasio con respuestas espontáneas en contexto real."
+  },
+
+  "items": [
+
+    {
+      "id": "IT001",
+      "orden": 1,
+      "bloque": "supervivencia_basica",
+      "nombre": "Ser / estar (identidad y estado)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": [],
+      "dependencias": ["IT003", "IT004", "IT005"],
+      "estructura_protagonista": "soy + [profesión/nacionalidad] / estoy en + [lugar]",
+      "chunks_principales": [
+        "Soy médico / Soy médica",
+        "Soy español / Soy española",
+        "Estoy en casa / Estoy en el trabajo",
+        "Él es profesor / Ella es profesora",
+        "¿Eres médico? No, soy ingeniero"
+      ],
+      "roles_semanticos_permitidos": ["PROFESION", "NACIONALIDAD", "CUALIDAD", "FAMILIA_RELACION", "LUGAR", "EMOCION"],
+      "vocabulario_minimo": { "cantidad": 6, "roles": ["PROFESION", "NACIONALIDAD"] },
+      "verbos_relacionados": ["VB01-B-001", "VB01-B-002"],
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Item fundamental. SER para profesión/nacionalidad/cualidad permanente. ESTAR para ubicación y estado temporal. Introducir juntos desde L001."
+    },
+
+    {
+      "id": "IT002",
+      "orden": 2,
+      "bloque": "supervivencia_basica",
+      "nombre": "Tener (posesión y existencia)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": ["IT004", "IT016"],
+      "estructura_protagonista": "tengo + el/la + objeto / no tengo + objeto",
+      "chunks_principales": [
+        "Tengo el libro / Tengo la llave",
+        "No tengo el dinero / No tengo la visa",
+        "¿Tienes el teléfono? Sí, lo tengo",
+        "Tiene un coche / Tiene una casa"
+      ],
+      "roles_semanticos_permitidos": ["OBJETO", "POSEIBLE", "EMOCION", "FAMILIA_RELACION", "CANTIDAD"],
+      "vocabulario_minimo": { "cantidad": 4, "roles": ["POSEIBLE", "OBJETO"] },
+      "verbos_relacionados": ["VB01-B-003"],
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir en L001 junto a IT016. La combinación tengo + lo/la es el chunk central de las primeras lecciones."
+    },
+
+    {
+      "id": "IT003",
+      "orden": 3,
+      "bloque": "supervivencia_basica",
+      "nombre": "Género y número",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT004"],
+      "dependencias": ["IT001", "IT004"],
+      "estructura_protagonista": "TRANSVERSAL — no tiene lección propia",
+      "chunks_principales": [
+        "la casa / el coche / las casas / los coches",
+        "la camisa roja / el vestido rojo",
+        "una médica / un médico"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 8, "descripcion": "Sustantivos variados de ambos géneros" },
+      "nivel_introduccion": "L001-L002",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Transversal. Se interioriza por exposición repetida en IT001 e IT002. No tiene lección dedicada. La concordancia se aprende por el patrón, no por la regla."
+    },
+
+    {
+      "id": "IT004",
+      "orden": 4,
+      "bloque": "supervivencia_basica",
+      "nombre": "Artículos (el, la, un, una)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": [],
+      "dependencias": ["IT001", "IT003"],
+      "estructura_protagonista": "TRANSVERSAL — no tiene lección propia",
+      "chunks_principales": [
+        "el profesor / la profesora",
+        "un coche / una casa",
+        "Tengo el libro / Tengo un libro"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 6, "descripcion": "Sustantivos variados de ambos géneros" },
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Transversal. Se interioriza por exposición en IT001 e IT002. Presentar mediante pares definido/indefinido desde el primer chunk."
+    },
+
+    {
+      "id": "IT005",
+      "orden": 5,
+      "bloque": "supervivencia_basica",
+      "nombre": "Pronombres sujeto singular (yo, tú, él/ella/usted)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": [],
+      "dependencias": ["IT001"],
+      "estructura_protagonista": "contraste yo / tú / él / ella con el mismo verbo",
+      "chunks_principales": [
+        "Yo soy médico / Tú eres profesor / Él es ingeniero",
+        "Yo tengo el coche / Tú tienes la llave",
+        "¿Tú eres español? No, soy francés",
+        "Ella está en casa / Él está en el trabajo"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos en 3 personas singular" },
+      "verbos_relacionados": ["VB01-B-001", "VB01-B-002"],
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir mediante conjugación visual de SER y ESTAR. El contraste entre personas es el chunk, no la persona aislada."
+    },
+
+    {
+      "id": "IT006",
+      "orden": 6,
+      "bloque": "supervivencia_basica",
+      "nombre": "Pronombres sujeto plural (nosotros, vosotros, ellos)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT005"],
+      "dependencias": ["IT001", "IT005"],
+      "estructura_protagonista": "contraste nosotros / ellos con el mismo verbo",
+      "chunks_principales": [
+        "Nosotros somos médicos / Ellos son profesores",
+        "Nosotros tenemos el coche / Ellos tienen la llave",
+        "Vosotros estáis en casa / Ellos están en el trabajo"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos en 3 personas plural" },
+      "verbos_relacionados": ["VB01-B-001", "VB01-B-002"],
+      "nivel_introduccion": "L003",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir tras dominio de singular. Mostrar patrón de conjugación completo."
+    },
+
+    {
+      "id": "IT007",
+      "orden": 7,
+      "bloque": "supervivencia_basica",
+      "nombre": "Demostrativos de cercanía (este, esta, esto)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT004"],
+      "dependencias": ["IT001"],
+      "estructura_protagonista": "este/esta/esto + objeto",
+      "chunks_principales": [
+        "Este es mi coche / Esta es mi llave",
+        "Esto es un problema / Esto está bien",
+        "¿Qué es esto? / Esto es una mesa"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Objetos del entorno inmediato" },
+      "nivel_introduccion": "L002",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Mostrar con gestos físicos. Concordancia clara este/esta. Esto para objetos sin género identificado."
+    },
+
+    {
+      "id": "IT008",
+      "orden": 8,
+      "bloque": "supervivencia_basica",
+      "nombre": "Demostrativos de distancia (ese, aquel)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT007"],
+      "dependencias": ["IT001", "IT007"],
+      "estructura_protagonista": "ese/esa / aquel/aquella + objeto",
+      "chunks_principales": [
+        "Ese es mi coche / Esa es tu llave",
+        "Aquel edificio es el banco / Aquella calle es la mía",
+        "¿Ves ese coche? / ¿Ves aquella tienda?"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Objetos alejados del hablante" },
+      "nivel_introduccion": "L003",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Ese = distancia media. Aquel = distancia lejana. Introducir tras cercanía. Mostrar diferencia con gestos."
+    },
+
+    {
+      "id": "IT009",
+      "orden": 9,
+      "bloque": "supervivencia_basica",
+      "nombre": "Muy / mucho (intensidad y cantidad)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "muy + adjetivo / mucho + sustantivo o verbo",
+      "chunks_principales": [
+        "Soy muy alto / Es muy inteligente",
+        "Tengo mucho trabajo / Hay mucha gente",
+        "Me gusta mucho / Trabaja mucho",
+        "Es muy caro / No es muy difícil"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Adjetivos y sustantivos contables e incontables" },
+      "nivel_introduccion": "L004",
+      "items_bloqueo": [],
+      "nota_pedagogica": "MUY modifica adjetivos y adverbios. MUCHO modifica sustantivos y verbos. Interiorizar por contraste de ejemplos, no por regla."
+    },
+
+    {
+      "id": "IT010",
+      "orden": 10,
+      "bloque": "supervivencia_basica",
+      "nombre": "Preposiciones básicas (de, en, a, con)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "verbo + preposición + lugar/persona/objeto",
+      "chunks_principales": [
+        "Estoy en casa / Trabajo en Madrid",
+        "Soy de España / Vengo de la oficina",
+        "Voy a la tienda / Voy al banco",
+        "Trabajo con mi jefe / Vivo con mi familia"
+      ],
+      "roles_semanticos_permitidos": ["LUGAR", "OBJETO", "PERSONA"],
+      "vocabulario_minimo": { "cantidad": 4, "descripcion": "Lugares, objetos, personas" },
+      "nivel_introduccion": "L002",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Presentar mediante contexto real, no mediante reglas. La contracción al/del se introduce con ejemplos directos."
+    },
+
+    {
+      "id": "IT011",
+      "orden": 11,
+      "bloque": "supervivencia_basica",
+      "nombre": "Posesivos átonos singular (mi, tu, su)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT005"],
+      "dependencias": ["IT005"],
+      "estructura_protagonista": "mi/tu/su + objeto",
+      "chunks_principales": [
+        "Mi casa es grande / Tu coche es nuevo",
+        "Su teléfono está aquí / Su llave está ahí",
+        "¿Es tu coche? No, es mi coche",
+        "Voy a mi casa / Vas a tu oficina"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Objetos poseíbles" },
+      "nivel_introduccion": "L003",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Vincular claramente a persona: mi=yo, tu=tú, su=él/ella/usted. No cambian por género del objeto."
+    },
+
+    {
+      "id": "IT012",
+      "orden": 12,
+      "bloque": "supervivencia_basica",
+      "nombre": "Posesivos átonos plural (nuestro/a, vuestro/a, su)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT006", "IT011"],
+      "dependencias": ["IT006", "IT011"],
+      "estructura_protagonista": "nuestro/a / su + objeto",
+      "chunks_principales": [
+        "Nuestro coche es nuevo / Nuestra casa es grande",
+        "Su trabajo es interesante / Sus hijos están aquí",
+        "Vuestro jefe llama / Vuestra oficina está cerca"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Objetos plurales o colectivos" },
+      "nivel_introduccion": "L004",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Nuestro/vuestra sí concuerdan con el género del objeto. Introducir tras dominio de singular."
+    },
+
+    {
+      "id": "IT013",
+      "orden": 13,
+      "bloque": "supervivencia_basica",
+      "nombre": "Preguntas básicas (qué, quién, dónde, cuándo, cómo)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT005"],
+      "dependencias": ["IT005"],
+      "estructura_protagonista": "¿Qué/quién/dónde/cuándo/cómo + verbo?",
+      "chunks_principales": [
+        "¿Qué es esto? / ¿Qué tienes?",
+        "¿Quién eres? / ¿Quién llama?",
+        "¿Dónde estás? / ¿Dónde vives?",
+        "¿Cuándo es la reunión? / ¿Cuándo vas?",
+        "¿Cómo te llamas? / ¿Cómo estás?"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 4, "descripcion": "Palabras interrogativas" },
+      "nivel_introduccion": "L002",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Practicar siempre en pares pregunta-respuesta. La inversión verbo-sujeto se interioriza por el patrón."
+    },
+
+    {
+      "id": "IT014",
+      "orden": 14,
+      "bloque": "supervivencia_basica",
+      "nombre": "Negación (no, nunca, tampoco)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "no + verbo",
+      "chunks_principales": [
+        "No soy ingeniero / No estoy en casa",
+        "No tengo el libro / No lo tengo",
+        "Nunca voy al gimnasio / Nunca tengo tiempo",
+        "Yo tampoco / Yo tampoco lo tengo"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Frases afirmativas para negar" },
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "NO va siempre antes del verbo. Introducir desde L001 junto a IT001. Es el primer chunk de contraste afirmativo/negativo."
+    },
+
+    {
+      "id": "IT015",
+      "orden": 15,
+      "bloque": "supervivencia_basica",
+      "nombre": "Localización: aquí, ahí, allí",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT010"],
+      "dependencias": ["IT010"],
+      "estructura_protagonista": "estar + aquí/ahí/allí",
+      "chunks_principales": [
+        "Estoy aquí / Estás ahí / Está allí",
+        "La llave está aquí / El coche está allí",
+        "¿Estás aquí? / No, estoy allí"
+      ],
+      "roles_semanticos_permitidos": ["LUGAR"],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Objetos y personas localizables" },
+      "verbos_relacionados": ["VB01-B-002"],
+      "nivel_introduccion": "L003",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Aquí=cerca del hablante, ahí=cerca del oyente, allí=lejos de ambos. Reforzar con gestos físicos."
+    },
+
+    {
+      "id": "IT016",
+      "orden": 16,
+      "bloque": "construccion_frases",
+      "nombre": "Objeto directo (lo, la, los, las)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001", "IT005"],
+      "dependencias": ["IT020", "IT037"],
+      "estructura_protagonista": "verbo + objeto → lo/la/los/las + verbo",
+      "chunks_principales": [
+        "Tengo el libro → Lo tengo",
+        "Quiero la llave → La quiero",
+        "Voy a comprarlo / Voy a comprarla",
+        "Tengo que enviarlo / Tengo que enviarla",
+        "No lo tengo / No la tengo",
+        "¿Lo tienes? / ¿La tienes?"
+      ],
+      "roles_semanticos_permitidos": ["OBJETO", "POSEIBLE"],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos transitivos (tener, comprar, ver, enviar)" },
+      "verbos_relacionados": ["VB04-B-001"],
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Item central del método. Introducir en L001 junto a IT002. El patrón objeto → pronombre es el chunk más importante de las primeras lecciones."
+    },
+
+    {
+      "id": "IT017",
+      "orden": 17,
+      "bloque": "construccion_frases",
+      "nombre": "Verbos reflexivos / pronominales (llamarse)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT005", "IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "me llamo / te llamas / se llama",
+      "chunks_principales": [
+        "Me llamo Ana / ¿Cómo te llamas?",
+        "Se llama Juan / Se llama María",
+        "¿Cómo se llama él? / Se llama Carlos",
+        "Me levanto a las ocho / Me ducho por la mañana"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos reflexivos frecuentes" },
+      "verbos_relacionados": ["VB05-B-001"],
+      "nivel_introduccion": "L001",
+      "items_bloqueo": [],
+      "nota_pedagogica": "LLAMARSE es el reflexivo más importante y el primero que necesita cualquier alumno. Introducir en L001."
+    },
+
+    {
+      "id": "IT018",
+      "orden": 18,
+      "bloque": "construccion_frases",
+      "nombre": "Gustar y similares",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "me/te/le gusta + objeto/infinitivo",
+      "chunks_principales": [
+        "Me gusta la música / Me gusta el café",
+        "¿Te gusta? / Sí, me gusta mucho",
+        "No me gusta nada / No me gusta el frío",
+        "Le gusta trabajar / Le gustan los libros",
+        "Me encanta / Me molesta / Me interesa"
+      ],
+      "roles_semanticos_permitidos": ["ACTIVIDAD", "OBJETO"],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Actividades y objetos que pueden gustar" },
+      "verbos_relacionados": ["VB06-B-001"],
+      "nivel_introduccion": "L004",
+      "items_bloqueo": [],
+      "nota_pedagogica": "GUSTAR funciona al revés del inglés: el sujeto va pospuesto. Introducir por el patrón me gusta + sustantivo/infinitivo sin explicar la inversión."
+    },
+
+    {
+      "id": "IT019",
+      "orden": 19,
+      "bloque": "construccion_frases",
+      "nombre": "Objeto indirecto (le, les)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT016"],
+      "dependencias": ["IT020"],
+      "estructura_protagonista": "le/les + verbo + objeto",
+      "chunks_principales": [
+        "Le doy el dinero / Le envío el correo",
+        "Le llamo mañana / Le digo la verdad",
+        "Les envío el documento / Les digo que no",
+        "¿Le has llamado? / Le voy a decir algo"
+      ],
+      "roles_semanticos_permitidos": ["PERSONA"],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos con objeto indirecto (dar, enviar, decir, llamar)" },
+      "nivel_introduccion": "L006",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir después de dominar IT016. El objeto indirecto responde a ¿a quién?"
+    },
+
+    {
+      "id": "IT020",
+      "orden": 20,
+      "bloque": "construccion_frases",
+      "nombre": "Se lo / se la (doble pronombre)",
+      "valor_carga": 3,
+      "activo": true,
+      "prerequisitos": ["IT016", "IT019"],
+      "dependencias": [],
+      "estructura_protagonista": "se lo/la + verbo",
+      "chunks_principales": [
+        "Se lo doy / Se la envío",
+        "Se lo explico / Se la mando",
+        "¿Se lo digo? / No se lo digas",
+        "Voy a dárselo / Tengo que dársela"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos con OD + OI" },
+      "nivel_introduccion": "L007",
+      "items_bloqueo": [],
+      "nota_pedagogica": "El más complejo del método. Introducir SOLO tras dominio consolidado de IT016 e IT019."
+    },
+
+    {
+      "id": "IT021",
+      "orden": 21,
+      "bloque": "construccion_frases",
+      "nombre": "Perífrasis verbales: ir a, tener que, poder, querer, deber",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001", "IT002"],
+      "dependencias": [],
+      "estructura_protagonista": "[modal] + infinitivo / [modal] + infinitivo + lo/la",
+      "chunks_principales": [
+        "Voy a comprar / Voy a llamar / Voy a trabajar",
+        "Tengo que ir / Tengo que terminar / Tengo que pagar",
+        "Puedo ayudar / No puedo venir / ¿Puedes llamarme?",
+        "Quiero ver / Quiero comprar / No quiero ir",
+        "Debo llamarle / Debes hacerlo / No debes preocuparte",
+        "Voy a comprarlo / Tengo que enviarlo / Puedo arreglarlo"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Infinitivos variados de uso cotidiano" },
+      "verbos_relacionados": ["VB07-B-001", "VB07-B-002", "VB07-B-003"],
+      "nivel_introduccion": "L002",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Item fundamental. Fusiona IT041 original (deber/tener que son el mismo patrón, diferente registro). La combinación con IT016 genera los chunks más productivos del método."
+    },
+
+    {
+      "id": "IT022",
+      "orden": 22,
+      "bloque": "construccion_frases",
+      "nombre": "Comparativos (más que, menos que, mejor, peor, igual que)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "más/menos + adjetivo + que / mejor/peor + que",
+      "chunks_principales": [
+        "Es más caro que el otro / Es menos interesante",
+        "Habla mejor que yo / Trabaja peor que antes",
+        "Es igual que el tuyo / No es tan difícil como parece",
+        "Tengo más trabajo que tú / Gana menos que ella"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Adjetivos comparables" },
+      "nivel_introduccion": "L005",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir mediante pares de objetos o personas reales. Mejor/peor son irregulares: no se dice más bueno."
+    },
+
+    {
+      "id": "IT023",
+      "orden": 23,
+      "bloque": "construccion_frases",
+      "nombre": "Cuantificadores (algo, nada, mucho, poco, bastante, demasiado)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT009"],
+      "dependencias": [],
+      "estructura_protagonista": "cuantificador + sustantivo/verbo",
+      "chunks_principales": [
+        "Tengo algo de tiempo / No tengo nada",
+        "Hay mucha gente / Hay poca comida",
+        "Tengo bastante dinero / Es bastante difícil",
+        "Hay demasiado ruido / Comes demasiado",
+        "¿Tienes algo? / No tengo nada de dinero"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Sustantivos cuantificables" },
+      "nivel_introduccion": "L005",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Algo/nada son pronombres o adverbios. Mucho/poco/bastante concuerdan con el sustantivo cuando funcionan como adjetivos."
+    },
+
+    {
+      "id": "IT024",
+      "orden": 24,
+      "bloque": "construccion_frases",
+      "nombre": "Conjunciones básicas (y, o, pero, porque, que)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "frase + conjunción + frase",
+      "chunks_principales": [
+        "Tengo el libro y la llave / Tú o yo",
+        "Es caro pero lo quiero / Es difícil pero posible",
+        "No voy porque estoy cansado / Lo hago porque quiero",
+        "Creo que es bueno / Sé que tienes razón"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Frases simples para conectar" },
+      "nivel_introduccion": "L004",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Las conjunciones se aprenden en contexto, no como lista. Pero introduce contraste, porque introduce causa, que introduce subordinación."
+    },
+
+    {
+      "id": "IT025",
+      "orden": 25,
+      "bloque": "construccion_frases",
+      "nombre": "Preposiciones funcionales (para, por, desde, hasta)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT010"],
+      "dependencias": [],
+      "estructura_protagonista": "preposición + sustantivo/infinitivo",
+      "chunks_principales": [
+        "Es para ti / Lo hago para mi familia",
+        "Gracias por todo / Por eso no voy",
+        "Trabajo desde las nueve / Desde aquí se ve bien",
+        "Hasta mañana / Hasta las cinco / Hasta ahora"
+      ],
+      "roles_semanticos_permitidos": ["LUGAR", "TIEMPO", "PERSONA"],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Contextos de finalidad, causa, origen y límite" },
+      "nivel_introduccion": "L006",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Para = finalidad/destinatario. Por = causa/intercambio. Desde/hasta = origen y límite temporal o espacial. Introducir por contraste de ejemplos reales."
+    },
+
+    {
+      "id": "IT026",
+      "orden": 26,
+      "bloque": "construccion_frases",
+      "nombre": "Adverbios temporales (ya, todavía, siempre, nunca, a veces)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT014"],
+      "dependencias": [],
+      "estructura_protagonista": "adverbio temporal + verbo",
+      "chunks_principales": [
+        "Ya lo tengo / Ya he llamado / ¿Ya has comido?",
+        "Todavía no he llegado / Todavía estoy aquí",
+        "Siempre llego tarde / Siempre lo hago así",
+        "Nunca tengo tiempo / Nunca voy al gimnasio",
+        "A veces trabajo en casa / A veces no puedo"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos cotidianos para contextualizar" },
+      "nivel_introduccion": "L005",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Ya implica que algo ha ocurrido o ha cambiado. Todavía no implica que aún no ha ocurrido. Introducir por contraste."
+    },
+
+    {
+      "id": "IT027",
+      "orden": 27,
+      "bloque": "control_temporal",
+      "nombre": "Presente continuo (estar + gerundio)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "estoy/estás/está + gerundio",
+      "chunks_principales": [
+        "Estoy comiendo / Estoy trabajando",
+        "¿Qué estás haciendo? / Estoy estudiando",
+        "Está llamando / Está esperando",
+        "No estoy durmiendo / Estoy descansando",
+        "¿Estás viendo la tele? / Sí, estoy viéndola"
+      ],
+      "roles_semanticos_permitidos": ["ACTIVIDAD"],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos que forman gerundio fácil" },
+      "verbos_relacionados": ["VB01-B-002"],
+      "nivel_introduccion": "L006",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Expresa acción en curso en el momento de hablar. Introducir tras dominar ESTAR básico."
+    },
+
+    {
+      "id": "IT028",
+      "orden": 28,
+      "bloque": "control_temporal",
+      "nombre": "Pretérito perfecto",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "he/has/ha + participio",
+      "chunks_principales": [
+        "He comido / He trabajado / He llamado",
+        "¿Has visto? / ¿Has hablado con él?",
+        "Ha llegado / Ha terminado / No ha llamado",
+        "Hoy he ido al banco / Esta semana he trabajado mucho",
+        "Ya he comido / Todavía no he llegado"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Participios regulares frecuentes" },
+      "nivel_introduccion": "L008",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Expresa experiencia reciente o acción con conexión al presente. Marcadores: hoy, esta semana, ya, todavía no, nunca."
+    },
+
+    {
+      "id": "IT029",
+      "orden": 29,
+      "bloque": "control_temporal",
+      "nombre": "Pretérito indefinido",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "fui/comí/trabajé + marcador temporal pasado",
+      "chunks_principales": [
+        "Ayer fui al banco / Ayer comí pizza",
+        "El lunes llamé a mi jefe / La semana pasada trabajé mucho",
+        "¿Fuiste al médico? / Sí, fui ayer",
+        "No llamé / No fui / No lo vi",
+        "¿Qué hiciste ayer? / Fui al cine y comí fuera"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos frecuentes en indefinido" },
+      "nivel_introduccion": "L009",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Acción completada en momento concreto del pasado. Marcadores: ayer, el lunes, la semana pasada, el año pasado, hace dos días."
+    },
+
+    {
+      "id": "IT030",
+      "orden": 30,
+      "bloque": "control_temporal",
+      "nombre": "Marcadores temporales (ayer, hoy, mañana, antes, después, ya, todavía)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT027"],
+      "dependencias": ["IT028", "IT029"],
+      "estructura_protagonista": "marcador temporal + tiempo verbal correcto",
+      "chunks_principales": [
+        "Ayer fui / Hoy he ido / Mañana voy a ir",
+        "Antes trabajaba mucho / Ahora trabajo menos",
+        "Después de comer, trabajo / Antes de salir, llama",
+        "Ya lo he hecho / Todavía no lo he hecho"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Marcadores temporales más frecuentes" },
+      "nivel_introduccion": "L008",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Item transversal imprescindible. Le dice al alumno qué tiempo verbal usar. Trabajar en paralelo con IT028 e IT029."
+    },
+
+    {
+      "id": "IT031",
+      "orden": 31,
+      "bloque": "control_temporal",
+      "nombre": "Futuro simple",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT021"],
+      "dependencias": [],
+      "estructura_protagonista": "comeré / trabajaré / iré",
+      "chunks_principales": [
+        "Mañana comeré en casa / El lunes trabajaré desde casa",
+        "¿Vendrás? / Sí, vendré / No sé si podré",
+        "Será difícil / No será fácil",
+        "¿Qué harás este fin de semana? / Iré a la playa"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos frecuentes en futuro" },
+      "nivel_introduccion": "L010",
+      "items_bloqueo": [],
+      "nota_pedagogica": "En español coloquial el futuro próximo (ir a + inf) es más frecuente que el futuro simple. Introducir el futuro simple para predicciones y promesas formales."
+    },
+
+    {
+      "id": "IT032",
+      "orden": 32,
+      "bloque": "control_temporal",
+      "nombre": "Pretérito imperfecto",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT029"],
+      "dependencias": ["IT033"],
+      "estructura_protagonista": "comía / trabajaba / vivía (hábito o descripción en el pasado)",
+      "chunks_principales": [
+        "Cuando era niño, vivía en Madrid",
+        "Antes trabajaba mucho / Antes no tenía coche",
+        "Siempre comía en casa / Todos los días llamaba a mi madre",
+        "Era tarde / Había mucha gente / Hacía calor"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos de hábito y descripción" },
+      "nivel_introduccion": "L011",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Expresa hábitos pasados y descripciones en el pasado. Marcadores: antes, cuando era, siempre, todos los días."
+    },
+
+    {
+      "id": "IT033",
+      "orden": 33,
+      "bloque": "control_temporal",
+      "nombre": "Contraste indefinido vs imperfecto",
+      "valor_carga": 3,
+      "activo": true,
+      "prerequisitos": ["IT029", "IT032"],
+      "dependencias": [],
+      "estructura_protagonista": "[imperfecto] cuando [indefinido]",
+      "chunks_principales": [
+        "Estaba comiendo cuando llamó",
+        "Vivía en Madrid cuando conocí a Ana",
+        "Era tarde cuando llegué a casa",
+        "Tenía hambre pero no había comida",
+        "Llovía cuando salí / Hacía frío cuando llegué"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos narrativos frecuentes" },
+      "nivel_introduccion": "L012",
+      "items_bloqueo": [],
+      "nota_pedagogica": "La estructura más narrativa del método. Imperfecto = fondo/descripción. Indefinido = acción puntual que interrumpe."
+    },
+
+    {
+      "id": "IT034",
+      "orden": 34,
+      "bloque": "control_temporal",
+      "nombre": "Condicional básico (me gustaría, podría, querría)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT018", "IT021"],
+      "dependencias": [],
+      "estructura_protagonista": "me gustaría / podría / querría + infinitivo",
+      "chunks_principales": [
+        "Me gustaría ir / Me gustaría verlo",
+        "¿Podría ayudarme? / Podría ser",
+        "Querría hablar con usted / Querría reservar una mesa",
+        "¿Le importaría...? / ¿Podría decirme...?"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Infinitivos de petición y deseo" },
+      "nivel_introduccion": "L012",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Condicional de cortesía y deseo. Muy frecuente en registro formal. Me gustaría es el chunk más importante."
+    },
+
+    {
+      "id": "IT035",
+      "orden": 35,
+      "bloque": "fluidez",
+      "nombre": "Relativos básicos (que, donde)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT024"],
+      "dependencias": [],
+      "estructura_protagonista": "[sustantivo] + que/donde + [frase]",
+      "chunks_principales": [
+        "El hombre que llamó / La mujer que vive aquí",
+        "El lugar donde trabajo / La casa donde vivía",
+        "Es el libro que quiero / Es la persona que busco",
+        "La tienda donde compro / El hotel donde me quedé"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Sustantivos de persona y lugar" },
+      "nivel_introduccion": "L013",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Que para personas y cosas. Donde para lugares. Introducir por exposición a frases naturales, no por definición gramatical."
+    },
+
+    {
+      "id": "IT036",
+      "orden": 36,
+      "bloque": "fluidez",
+      "nombre": "Imperativos básicos",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT016", "IT021"],
+      "dependencias": [],
+      "estructura_protagonista": "verbo en imperativo / no + subjuntivo (negativo)",
+      "chunks_principales": [
+        "Llama a tu madre / Llámala",
+        "Compra el pan / Cómpralo",
+        "No hagas eso / No lo hagas",
+        "Espera aquí / Espérame",
+        "Dame el libro / Dámelo / No me lo des"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos de acción cotidiana" },
+      "nivel_introduccion": "L013",
+      "items_bloqueo": [],
+      "nota_pedagogica": "El imperativo negativo usa subjuntivo. Introducir primero el afirmativo, luego el negativo. Los pronombres se posponen al imperativo afirmativo."
+    },
+
+    {
+      "id": "IT037",
+      "orden": 37,
+      "bloque": "fluidez",
+      "nombre": "Doble pronombre (me lo, te la, nos lo)",
+      "valor_carga": 3,
+      "activo": true,
+      "prerequisitos": ["IT016", "IT019"],
+      "dependencias": [],
+      "estructura_protagonista": "me/te/nos + lo/la/los/las + verbo",
+      "chunks_principales": [
+        "Me lo das / Me la envías",
+        "Te lo explico / Te la mando",
+        "¿Me lo puedes traer? / ¿Te lo envío?",
+        "No me lo digas / No te lo digo",
+        "Nos lo dijeron / Nos la mandaron"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos de transferencia (dar, enviar, decir, traer)" },
+      "nivel_introduccion": "L014",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Extensión natural de IT020. Si el alumno domina IT016 e IT019 este patrón llega solo. Orden fijo: OI + OD + verbo."
+    },
+
+    {
+      "id": "IT038",
+      "orden": 38,
+      "bloque": "fluidez",
+      "nombre": "Conectores discursivos (entonces, además, aunque, sin embargo, en cambio, por un lado... por otro)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT024"],
+      "dependencias": [],
+      "estructura_protagonista": "conector + idea relacionada",
+      "chunks_principales": [
+        "Tengo hambre, entonces voy a comer",
+        "Es caro, pero lo quiero / Es caro, aunque lo quiero",
+        "Trabajo mucho, además estudio español",
+        "No tengo dinero, entonces no puedo comprarlo",
+        "Sin embargo, no estoy de acuerdo",
+        "Creo que tienes razón / En cambio, creo que en este punto estás equivocado",
+        "Por un lado es interesante / Por otro lado es muy difícil",
+        "Por una parte entiendo tu posición / Por otra parte no estoy de acuerdo",
+        "Dicho esto, creo que podemos seguir adelante",
+        "Ahora bien, hay que tener en cuenta que..."
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Frases simples para conectar" },
+      "nivel_introduccion": "L013",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Entonces = consecuencia. Además = adición. Aunque = concesión. Sin embargo = contraste formal. Introducir por pares de contraste."
+    },
+
+    {
+      "id": "IT039",
+      "orden": 39,
+      "bloque": "fluidez",
+      "nombre": "Expresar opinión (creo que, pienso que, para mí)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT024"],
+      "dependencias": [],
+      "estructura_protagonista": "creo que / pienso que / para mí + frase",
+      "chunks_principales": [
+        "Creo que es bueno / Creo que no es verdad",
+        "Pienso que tienes razón / No creo que sea fácil",
+        "¿Qué crees? / Creo que sí / Creo que no",
+        "Para mí es importante / En mi opinión está bien"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Temas sobre los que opinar" },
+      "nivel_introduccion": "L014",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Creo que + indicativo en afirmativo. No creo que + subjuntivo. Introducir primero el afirmativo. La forma negativa se trabaja en IT044."
+    },
+
+    {
+      "id": "IT040",
+      "orden": 40,
+      "bloque": "fluidez",
+      "nombre": "Causa y consecuencia (porque, por eso, así que)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT024"],
+      "dependencias": [],
+      "estructura_protagonista": "frase + porque + causa / causa + por eso + consecuencia",
+      "chunks_principales": [
+        "No fui porque estaba enfermo",
+        "Tengo hambre porque no he comido",
+        "No tengo coche, por eso voy en metro",
+        "Estudia mucho, por eso habla bien español",
+        "Llegué tarde, así que no pude entrar"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Situaciones causa-efecto cotidianas" },
+      "nivel_introduccion": "L013",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Porque introduce causa. Por eso introduce consecuencia. Así que también introduce consecuencia en registro más coloquial."
+    },
+
+    {
+      "id": "IT042",
+      "orden": 42,
+      "bloque": "fluidez",
+      "nombre": "Expresar posibilidad (quizá, tal vez, a lo mejor)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT039"],
+      "dependencias": [],
+      "estructura_protagonista": "quizá / tal vez / a lo mejor + frase",
+      "chunks_principales": [
+        "Quizá voy mañana / Quizá no puedo",
+        "Tal vez tiene razón / Tal vez es verdad",
+        "¿Vienes? A lo mejor / No sé, quizá",
+        "A lo mejor llega tarde / A lo mejor no viene"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Situaciones de incertidumbre" },
+      "nivel_introduccion": "L014",
+      "items_bloqueo": [],
+      "nota_pedagogica": "A lo mejor siempre va con indicativo. Quizá y tal vez pueden ir con indicativo o subjuntivo según grado de certeza. En nivel B1 introducir con indicativo primero."
+    },
+
+    {
+      "id": "IT043",
+      "orden": 43,
+      "bloque": "b1_real",
+      "nombre": "Subjuntivo básico de supervivencia (quiero que, necesito que, espero que)",
+      "valor_carga": 3,
+      "activo": true,
+      "prerequisitos": ["IT001", "IT029"],
+      "dependencias": [],
+      "estructura_protagonista": "quiero/necesito/espero que + subjuntivo",
+      "chunks_principales": [
+        "Quiero que vengas / Quiero que me llames",
+        "Necesito que lo hagas / Necesito que estés aquí",
+        "Espero que llegues pronto / Espero que esté bien",
+        "No quiero que se lo digas / Quiero que me lo expliques"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos de deseo y necesidad" },
+      "nivel_introduccion": "L015",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Subjuntivo mínimo imprescindible. Solo formas básicas. No se enseñan reglas, se martillea el patrón con verbos cotidianos. Introducir muy tarde en la progresión."
+    },
+
+    {
+      "id": "IT044",
+      "orden": 44,
+      "bloque": "b1_real",
+      "nombre": "Opinión + subjuntivo / indicativo",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT039", "IT043"],
+      "dependencias": [],
+      "estructura_protagonista": "creo que + indicativo / no creo que + subjuntivo",
+      "chunks_principales": [
+        "Creo que tiene razón / No creo que tenga razón",
+        "Creo que viene / No creo que venga",
+        "Pienso que es verdad / No pienso que sea verdad",
+        "Está claro que es difícil / No está claro que sea posible"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Temas de opinión cotidianos" },
+      "nivel_introduccion": "L016",
+      "items_bloqueo": [],
+      "nota_pedagogica": "La regla no se explica. El patrón se interioriza: afirmativo → indicativo, negativo → subjuntivo. Introducir tras dominar IT043."
+    },
+
+    {
+      "id": "IT045",
+      "orden": 45,
+      "bloque": "b1_real",
+      "nombre": "Hipótesis básicas (si + presente + futuro/imperativo)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT031", "IT036"],
+      "dependencias": [],
+      "estructura_protagonista": "si + presente + futuro / si + presente + imperativo",
+      "chunks_principales": [
+        "Si tienes tiempo, llámame",
+        "Si viene, dímelo",
+        "Si no puedes, no pasa nada",
+        "Si lo ves, dile que llame",
+        "Si tengo dinero, lo compraré"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Situaciones condicionales cotidianas" },
+      "nivel_introduccion": "L016",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Condicional real: si + presente de indicativo. No confundir con hipótesis irreales (si + imperfecto subjuntivo) que no entran en este nivel."
+    },
+
+    {
+      "id": "IT046",
+      "orden": 46,
+      "bloque": "b1_real",
+      "nombre": "Pasiva refleja (se vende, se habla, se puede)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "se + verbo en tercera persona",
+      "chunks_principales": [
+        "Se vende / Se alquila / Se busca",
+        "Se habla español / Se come bien aquí",
+        "¿Se puede aparcar aquí? / No se puede fumar",
+        "Se dice que... / Se sabe que...",
+        "Se abre a las nueve / Se cierra a las ocho"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos de uso impersonal frecuente" },
+      "nivel_introduccion": "L017",
+      "items_bloqueo": [],
+      "nota_pedagogica": "La pasiva refleja es omnipresente en español. Se puede + infinitivo es el chunk más útil para el alumno."
+    },
+
+    {
+      "id": "IT047",
+      "orden": 47,
+      "bloque": "b1_real",
+      "nombre": "Estilo indirecto básico",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT029", "IT034"],
+      "dependencias": [],
+      "estructura_protagonista": "dijo que / me dijo que + frase en pasado",
+      "chunks_principales": [
+        "Me dijo que vendría / Me dijo que no podía",
+        "Dijo que estaba enfermo / Dijo que lo haría",
+        "Me preguntó si podía / Me pidió que lo hiciera",
+        "Me contó que había estado allí"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Verbos de comunicación (decir, preguntar, pedir, contar)" },
+      "nivel_introduccion": "L018",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir mediante situaciones de conversación reportada. El desplazamiento temporal (viene → vendría) se interioriza por el patrón."
+    },
+
+    {
+      "id": "IT048",
+      "orden": 48,
+      "bloque": "b1_real",
+      "nombre": "Matices ser/estar avanzados (cambio de significado con adjetivos)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT001"],
+      "dependencias": [],
+      "estructura_protagonista": "mismo adjetivo con ser y estar cambia el significado",
+      "chunks_principales": [
+        "Es listo (es inteligente) / Está listo (está preparado)",
+        "Es malo (es mala persona) / Está malo (está enfermo)",
+        "Es bueno (es buena persona) / Está bueno (está rico/atractivo)",
+        "Es seguro (es fiable) / Está seguro (está convencido)",
+        "Es aburrido (es pesado) / Está aburrido (tiene aburrimiento)"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Adjetivos que cambian significado con ser/estar" },
+      "nivel_introduccion": "L017",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Introducir por pares de contraste con contexto claro. No dar la lista completa de una vez."
+    },
+
+    {
+      "id": "IT049",
+      "orden": 49,
+      "bloque": "b1_real",
+      "nombre": "Conectores complejos (sin embargo, mientras, a pesar de, no obstante, es más, de hecho)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT038"],
+      "dependencias": [],
+      "estructura_protagonista": "conector complejo + idea",
+      "chunks_principales": [
+        "Sin embargo, no estoy de acuerdo",
+        "Mientras yo trabajaba, él dormía",
+        "Aunque es caro, lo quiero comprar",
+        "A pesar de eso, seguí adelante",
+        "No obstante, creo que es posible",
+        "Es más, creo que deberíamos reconsiderarlo",
+        "De hecho, ya lo había pensado antes",
+        "En definitiva, creo que es la mejor opción",
+        "En resumen, no hay otra salida",
+        "O sea, lo que quiero decir es que...",
+        "Es decir, la situación es más compleja de lo que parece"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Situaciones de contraste y concesión" },
+      "nivel_introduccion": "L018",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Registro más formal que los conectores básicos de IT038. Mientras puede ser temporal o concesivo según contexto."
+    },
+
+    {
+      "id": "IT051",
+      "orden": 51,
+      "bloque": "b1_real",
+      "nombre": "Ubicación espacial (encima de, al lado de, delante de, detrás de)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT010", "IT015"],
+      "dependencias": [],
+      "estructura_protagonista": "estar + preposición de lugar + sustantivo",
+      "chunks_principales": [
+        "Está encima de la mesa / Está debajo de la silla",
+        "Está al lado del banco / Está enfrente del hotel",
+        "Está delante de la puerta / Está detrás del coche",
+        "¿Dónde está? Está entre la tienda y el banco"
+      ],
+      "roles_semanticos_permitidos": ["LUGAR"],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Objetos y lugares para localizar" },
+      "nivel_introduccion": "L015",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Preposiciones de lugar compuestas. Siempre van seguidas de de + artículo. Practicar con objetos reales del entorno."
+    },
+
+    {
+      "id": "IT052",
+      "orden": 52,
+      "bloque": "b1_real",
+      "nombre": "Frecuencia (a menudo, cada día, de vez en cuando, una vez a la semana)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT026"],
+      "dependencias": [],
+      "estructura_protagonista": "expresión de frecuencia + verbo",
+      "chunks_principales": [
+        "Voy al gimnasio a menudo / Casi nunca salgo",
+        "Como fuera de casa cada día / Cada semana llamo a mi madre",
+        "De vez en cuando voy al cine / A veces trabajo desde casa",
+        "Una vez a la semana / Dos veces al mes / Todos los días"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Actividades cotidianas frecuentes" },
+      "nivel_introduccion": "L015",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Amplía IT026. Las locuciones de frecuencia son muy frecuentes en conversación real. Introducir por contraste de frecuencia alta/baja."
+    },
+
+    {
+      "id": "IT053",
+      "orden": 53,
+      "bloque": "b1_real",
+      "nombre": "El verbo doler y partes del cuerpo",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT018"],
+      "dependencias": [],
+      "estructura_protagonista": "me/te/le duele + parte del cuerpo",
+      "chunks_principales": [
+        "Me duele la cabeza / Me duele el estómago",
+        "Me duelen los pies / Me duelen las muelas",
+        "¿Te duele algo? / Me duele mucho la espalda",
+        "Le duele la garganta / No me duele nada"
+      ],
+      "roles_semanticos_permitidos": ["CUERPO"],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Partes del cuerpo más frecuentes" },
+      "verbos_relacionados": ["VB12-B-001"],
+      "nivel_introduccion": "L016",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Doler funciona igual que gustar. Me duele = me gusta. Introducir aprovechando el patrón ya conocido de IT018."
+    },
+
+    {
+      "id": "IT054",
+      "orden": 54,
+      "bloque": "b1_real",
+      "nombre": "Estar + participio (estado resultante)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT001", "IT028"],
+      "dependencias": [],
+      "estructura_protagonista": "estar + participio (describe el estado resultante de una acción)",
+      "chunks_principales": [
+        "La tienda está cerrada / La puerta está abierta",
+        "Estoy cansado / Estoy perdido / Estoy hecho",
+        "El trabajo está terminado / La mesa está puesta",
+        "Está roto / Está lleno / Está vacío"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Participios de estado frecuentes" },
+      "nivel_introduccion": "L016",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Estar + participio describe el resultado de una acción, no la acción en sí. El participio concuerda en género y número con el sujeto."
+    },
+
+    {
+      "id": "IT055",
+      "orden": 55,
+      "bloque": "b1_real",
+      "nombre": "Ser/Estar + adjetivos con cambio de significado",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT048"],
+      "dependencias": [],
+      "estructura_protagonista": "ser/estar + adjetivo (significado diferente según verbo)",
+      "chunks_principales": [
+        "Es rico (tiene dinero) / Está rico (tiene buen sabor)",
+        "Es vivo (es listo/despierto) / Está vivo (no está muerto)",
+        "Es muerto (inexpresivo) / Está muerto (ha fallecido)",
+        "Es orgulloso (es arrogante) / Está orgulloso (siente orgullo)"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Adjetivos con doble significado" },
+      "nivel_introduccion": "L018",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Ampliación de IT048. Introducir solo los pares más frecuentes y útiles. Contextualizar siempre con situaciones reales."
+    },
+
+    {
+      "id": "IT056",
+      "orden": 56,
+      "bloque": "b1_real",
+      "nombre": "SE pronominal para acciones accidentales (se me cayó, se me olvidó)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT029"],
+      "dependencias": [],
+      "estructura_protagonista": "se me/te/le + verbo + objeto",
+      "chunks_principales": [
+        "Se me cayó el teléfono / Se me olvidó el nombre",
+        "Se me perdieron las llaves / Se me rompió el coche",
+        "Se le olvidó llamar / Se nos acabó el tiempo",
+        "¿Se te ha olvidado? / Se me ha ido de la cabeza"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Objetos que se pierden, caen o rompen" },
+      "nivel_introduccion": "L017",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Expresa que la acción ocurrió accidentalmente, sin intención del sujeto. El objeto se convierte en sujeto gramatical. Muy frecuente en español oral."
+    },
+
+    {
+      "id": "IT057",
+      "orden": 57,
+      "bloque": "b1_real",
+      "nombre": "Cuantificadores de intensidad (demasiado, suficiente, bastante)",
+      "valor_carga": 1,
+      "activo": true,
+      "prerequisitos": ["IT023"],
+      "dependencias": [],
+      "estructura_protagonista": "demasiado/suficiente/bastante + adjetivo/sustantivo",
+      "chunks_principales": [
+        "Es demasiado caro / Hay demasiada gente",
+        "No es suficiente / No tengo suficiente tiempo",
+        "Es bastante difícil / Tengo bastante trabajo",
+        "¿Es suficiente? / No, necesito más / Sí, es suficiente"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Adjetivos y sustantivos cuantificables" },
+      "nivel_introduccion": "L016",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Ampliación de IT023. Demasiado implica exceso negativo. Suficiente implica cantidad adecuada. Bastante implica cantidad considerable."
+    },
+
+    {
+      "id": "IT058",
+      "orden": 58,
+      "bloque": "b1_real",
+      "nombre": "Futuro con cuando + subjuntivo",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT043", "IT031"],
+      "dependencias": [],
+      "estructura_protagonista": "cuando + subjuntivo + futuro/imperativo",
+      "chunks_principales": [
+        "Cuando llegues, llámame",
+        "Cuando tenga dinero, lo compraré",
+        "Cuando sea mayor, viviré en España",
+        "Cuando puedas, dímelo / Cuando quieras, vamos"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 2, "descripcion": "Situaciones futuras condicionadas" },
+      "nivel_introduccion": "L018",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Cuando referido al futuro siempre va con subjuntivo en español. Diferencia fundamental con el inglés. Introducir por el patrón completo."
+    },
+
+    {
+      "id": "IT059",
+      "orden": 59,
+      "bloque": "b1_real",
+      "nombre": "Verbos con preposición fija (régimen preposicional)",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT025"],
+      "dependencias": [],
+      "estructura_protagonista": "verbo + preposición fija + complemento",
+      "chunks_principales": [
+        "Sueño con viajar / Pienso en ti",
+        "Depende de ti / Confío en él",
+        "Me alegro de verte / Tengo ganas de salir",
+        "Quedamos en el bar / Insiste en hacerlo",
+        "Se trata de trabajar / Me olvidé de llamar"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos de uso frecuente con preposición fija" },
+      "nivel_introduccion": "L017",
+      "items_bloqueo": [],
+      "nota_pedagogica": "El régimen preposicional no tiene lógica predecible. Se aprende verbo a verbo por exposición repetida. Introducir los más frecuentes primero."
+    },
+
+    {
+      "id": "IT060",
+      "orden": 60,
+      "bloque": "b1_real",
+      "nombre": "Gerundio de modo (llegar corriendo, hablar llorando)",
+      "valor_carga": 2,
+      "activo": true,
+      "obligatorio_b1": true,
+      "prerequisitos": ["IT027"],
+      "dependencias": [],
+      "estructura_protagonista": "verbo principal + gerundio (describe cómo se realiza la acción)",
+      "chunks_principales": [
+        "Llegó corriendo / Salió llorando",
+        "Habla gesticulando mucho / Come leyendo el periódico",
+        "Subió las escaleras cantando",
+        "Me lo explicó riendo / Lo dijo temblando",
+        "Entró silbando / Salió corriendo sin decir nada"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Verbos de movimiento y expresión que admiten gerundio de modo" },
+      "nivel_introduccion": "L019",
+      "items_bloqueo": [],
+      "nota_pedagogica": "OBLIGATORIO para B1 natural. Fundamental para sonar como hablante real. El gerundio de modo es omnipresente en español oral. Marcado como obligatorio por decisión pedagógica del método."
+    },
+
+    {
+      "id": "IT062",
+      "orden": 62,
+      "bloque": "b1_real",
+      "nombre": "Expresiones idiomáticas frecuentes",
+      "valor_carga": 2,
+      "activo": true,
+      "prerequisitos": ["IT043"],
+      "dependencias": [],
+      "estructura_protagonista": "expresión fija en contexto real de conversación",
+      "chunks_principales": [
+        "No pasa nada / Qué va / Ni hablar",
+        "A ver... / Pues... / O sea... / Es que...",
+        "Me da igual / Me da lo mismo / Como quieras",
+        "Está claro / Claro que sí / Claro que no",
+        "¿Qué tal? / Tirando / Más o menos / Aquí andamos",
+        "Venga va / Hombre, claro / Mujer, por favor"
+      ],
+      "roles_semanticos_permitidos": [],
+      "vocabulario_minimo": { "cantidad": 3, "descripcion": "Situaciones conversacionales cotidianas" },
+      "nivel_introduccion": "L019",
+      "items_bloqueo": [],
+      "nota_pedagogica": "Las expresiones idiomáticas se aprenden como bloques fijos, no se analizan. Son la diferencia entre sonar extranjero y sonar natural. Introducir en contexto siempre."
+    }
+
+  ],
+
+  "grafo_dependencias": {
+    "descripcion": "Mapa de prerequisitos y dependencias entre items",
+    "nivel_basico_critico": [
+      "IT001 -> IT005, IT006, IT013",
+      "IT004 -> IT003",
+      "IT005 -> IT006, IT011",
+      "IT010 -> IT015",
+      "IT002 + IT016 -> chunk central L001"
+    ],
+    "nivel_construccion_critico": [
+      "IT016 -> IT019 -> IT020",
+      "IT016 -> IT037",
+      "IT021 + IT016 -> chunks más productivos del método",
+      "IT041 fusionado en IT021"
+    ],
+    "nivel_temporal_critico": [
+      "IT028 + IT029 -> IT033",
+      "IT029 -> IT032 -> IT033",
+      "IT030 transversal a IT028 e IT029"
+    ],
+    "nivel_b1_critico": [
+      "IT043 -> IT044",
+      "IT043 + IT031 -> IT058",
+      "IT039 -> IT044",
+      "IT048 -> IT055"
+    ]
+  },
+
+  "bloques_pedagogicos": {
+    "supervivencia_basica": {
+      "items": ["IT001", "IT002", "IT003", "IT004", "IT005", "IT006", "IT007", "IT008", "IT009", "IT010", "IT011", "IT012", "IT013", "IT014", "IT015"],
+      "leccion_introduccion": "L001-L004",
+      "objetivo": "Frases básicas de supervivencia: identidad, posesión, ubicación",
+      "carga_cognitiva_maxima": 20
+    },
+    "construccion_frases": {
+      "items": ["IT016", "IT017", "IT018", "IT019", "IT020", "IT021", "IT022", "IT023", "IT024", "IT025", "IT026"],
+      "leccion_introduccion": "L001-L010",
+      "objetivo": "Construcción de frases más complejas con pronombres y perífrasis",
+      "carga_cognitiva_maxima": 25
+    },
+    "control_temporal": {
+      "items": ["IT027", "IT028", "IT029", "IT030", "IT031", "IT032", "IT033", "IT034"],
+      "leccion_introduccion": "L006-L014",
+      "objetivo": "Control de tiempos verbales: presente continuo, pasados y futuro",
+      "carga_cognitiva_maxima": 30
+    },
+    "fluidez": {
+      "items": ["IT035", "IT036", "IT037", "IT038", "IT039", "IT040", "IT042"],
+      "leccion_introduccion": "L011-L018",
+      "objetivo": "Fluidez y expresión natural: conectores, opinión, relativos, imperativos",
+      "carga_cognitiva_maxima": 35
+    },
+    "b1_real": {
+      "items": ["IT043", "IT044", "IT045", "IT046", "IT047", "IT048", "IT049", "IT051", "IT052", "IT053", "IT054", "IT055", "IT056", "IT057", "IT058", "IT059", "IT060", "IT062"],
+      "leccion_introduccion": "L015-L025",
+      "objetivo": "B1 real: subjuntivo, pasiva, estilo indirecto, expresiones idiomáticas, naturalidad",
+      "carga_cognitiva_maxima": 40
+    }
+  },
+
+  "notas_importantes": {
+    "items_transversales": "IT003 y IT004 no tienen lección propia. Se interiorizan por exposición en todas las lecciones.",
+    "chunk_central_metodo": "IT002 + IT016 en L001 es el chunk más importante del método. El patrón objeto → pronombre es la base de todo.",
+    "fusion_IT041": "IT041 (obligación) fusionado en IT021 (perífrasis). Deber y tener que son el mismo patrón, diferente registro.",
+    "items_eliminados": "IT050 (registro) -> criterio transversal. IT061 (matices emocionales) -> contenido del Gimnasio. IT063 (reformulación) -> lección especial de estrategias.",
+    "IT060_obligatorio": "IT060 (gerundio de modo) es OBLIGATORIO para B1 natural. No es opcional.",
+    "subjuntivo_tardio": "IT043 (subjuntivo) SOLO en L015+. La progresión no llega al subjuntivo hasta dominar todos los tiempos indicativos.",
+    "progresion_pasados": "IT028 (perfecto) -> IT029 (indefinido) -> IT032 (imperfecto) -> IT033 (contraste)"
+  }
+}

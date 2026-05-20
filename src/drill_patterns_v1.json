@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "description": "Patrones de drill por bloque. Cada patrón tiene slots con restricciones semánticas. El generador empareja vocabulario de los campos semánticos correspondientes.",
+
+  "semantic_roles": {
+    "OBJETO_POSEIBLE": {
+      "fields": ["CS02", "CS03"],
+      "filters": ["libro", "llave", "teléfono", "coche", "dinero", "visa", "trabajo", "maleta", "pasaporte", "ordenador", "sofá", "mochila", "cuaderno", "bolsa", "plato", "taza", "vaso", "camisa", "abrigo", "zapato", "vestido", "camiseta", "pantalón", "chaqueta", "zapatilla", "calcetines", "bolso", "caja", "ticket", "recibo", "factura", "tarjeta", "producto", "pedido"]
+    },
+    "LUGAR": {
+      "fields": ["CS02", "CS06"],
+      "filters": ["casa", "piso", "trabajo", "oficina", "tienda", "baño", "salón", "cocina", "habitación", "jardín", "balcón", "garaje", "edificio", "ciudad", "pueblo", "calle", "plaza", "avenida", "parque", "playa", "montaña", "gimnasio", "hospital", "farmacia", "restaurante", "bar", "cine", "museo", "teatro", "estación", "aeropuerto", "puerto", "metro", "autobús", "tren"]
+    },
+    "PROFESION": {
+      "fields": ["CS01"],
+      "filters": ["médico", "profesor", "ingeniero", "estudiante", "abogado", "arquitecto", "cocinero", "enfermero", "policía", "bombero", "periodista", "actor", "cantante", "deportista", "escritor", "piloto", "científico", "programador", "diseñador", "fotógrafo", "traductor", "guía", "recepcionista", "vendedor", "camarero", "conductor", "mecánico", "electricista", "fontanero", "carpintero", "pintor", "jardinero", "peluquero", "maestro", "director", "gerente", "jefe", "empleado", "empresario", "comerciante"]
+    },
+    "NACIONALIDAD": {
+      "fields": ["CS01"],
+      "filters": ["español", "francés", "inglés", "alemán", "italiano", "portugués", "ruso", "chino", "japonés", "coreano", "árabe", "brasileño", "mexicano", "argentino", "colombiano", "venezolano", "chileno", "peruano", "ecuatoriano", "boliviano", "paraguayo", "uruguayo", "costarricense", "guatemalteco", "hondureño", "nicaragüense", "panameño", "salvadoreño", "cubano", "dominicano", "puertorriqueño", "estadounidense", "canadiense", "australiano", "neozelandés", "indio", "pakistaní", "turco", "griego", "polaco", "checo", "húngaro", "rumano", "búlgaro", "croata", "serbio", "esloveno", "eslovaco", "lituano", "leton", "estonio"]
+    },
+    "PERSONA_FAMILIAR": {
+      "fields": ["CS01"],
+      "filters": ["padre", "madre", "hijo", "hija", "hermano", "hermana", "amigo", "amiga", "abuelo", "abuela", "tío", "tía", "primo", "prima", "novio", "novia", "esposo", "esposa", "compañero", "compañera", "vecino", "vecina", "colega", "jefe", "jefa"]
+    },
+    "ALIMENTO": {
+      "fields": ["CS04"],
+      "filters": ["pan", "café", "té", "leche", "agua", "arroz", "pasta", "huevo", "queso", "pollo", "carne", "pescado", "verdura", "fruta", "ensalada", "sopa", "azúcar", "sal", "aceite", "mantequilla", "mermelada", "miel", "yogur", "cereal", "galleta", "pastel", "tarta", "helado", "chocolate", "vino", "cerveza", "zumo", "refresco", "salsa", "pan", "bocadillo", "tapa", "platos"]
+    },
+    "EMOCION": {
+      "fields": ["CS10"],
+      "filters": ["amor", "odio", "alegría", "tristeza", "miedo", "sorpresa", "enfado", "calma", "felicidad", "pena", "nervios", "vergüenza", "orgullo", "paciencia", "prisa", "error", "verdad", "mentira", "pensamiento", "sentimiento", "emoción", "humor", "tranquilidad", "preocupación"]
+    },
+    "ACTIVIDAD": {
+      "fields": ["CS05", "CS09"],
+      "filters": ["deporte", "fútbol", "baloncesto", "tenis", "natación", "música", "canción", "baile", "paseo", "viaje", "excursión", "camping", "pesca", "caza", "ciclismo", "senderismo", "escalada", "esquí", "surf", "yoga", "meditación", "lectura", "escritura", "pintura", "fotografía", "cocina", "jardinería", "manualidades", "colección", "voluntariado", "juego", "ajedrez", "cartas", "videojuego"]
+    },
+    "TIEMPO": {
+      "fields": ["CS11"],
+      "filters": ["mañana", "tarde", "noche", "día", "semana", "mes", "año", "hoy", "ayer", "mañana", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo", "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre", "primavera", "verano", "otoño", "invierno", "momento", "instante", "época", "época", "período", "etapa", "fase", "ciclo", "rato", "rato", "ratio", "tiempo"]
+    }
+  },
+
+  "patterns": {
+    "BLOQUE_1": {
+      "description": "Verbos -AR singulares (yo, tú, él/ella)",
+      "blocks": [
+        {
+          "title": "1. VERBO {main_verb}",
+          "accent": "granate",
+          "template": {
+            "yo": { "es": "{conjugated_yo} {obj}", "en": "I {verb_en} {obj_en}" },
+            "tú": { "es": "{conjugated_tu} {obj}", "en": "You {verb_en} {obj_en}" },
+            "él": { "es": "{conjugated_él} {obj}", "en": "He {verb_en} {obj_en}" }
+          },
+          "slots": {
+            "obj": { "role": "OBJETO_POSEIBLE", "article": "definite" }
+          }
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "template": {
+            "yo": { "es": "No {conjugated_yo} {obj}", "en": "I don't {verb_en} {obj_en}" },
+            "tú": { "es": "No {conjugated_tu} {obj}", "en": "You don't {verb_en} {obj_en}" },
+            "él": { "es": "No {conjugated_él} {obj}", "en": "He doesn't {verb_en} {obj_en}" }
+          },
+          "slots": {
+            "obj": { "role": "OBJETO_POSEIBLE", "article": "definite" }
+          }
+        },
+        {
+          "title": "3. PRONOMBRE LO / LA",
+          "accent": "mostaza",
+          "template": {
+            "masc": { "es": "Lo {conjugated_yo}.", "en": "I {verb_en} it (masc)." },
+            "fem": { "es": "La {conjugated_yo}.", "en": "I {verb_en} it (fem)." }
+          },
+          "slots": {}
+        }
+      ]
+    }
+  }
+}

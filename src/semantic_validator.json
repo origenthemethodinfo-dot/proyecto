@@ -1,0 +1,143 @@
+{
+  "_description": "Tags semánticos para validación de colocaciones. Cada sustantivo tiene tags que indican su rol semántico. Cada verbo especifica qué tags acepta.",
+  
+  "tags": {
+    "CONSUMIBLE_BEBIDA": ["agua", "café", "té", "leche", "vino", "cerveza", "zumo", "refresco"],
+    "CONSUMIBLE_COMIDA": ["pan", "carne", "pescado", "arroz", "pasta", "huevo", "queso", "pollo", "verdura", "fruta", "ensalada", "sopa", "azúcar", "sal", "aceite", "mantequilla", "mermelada", "miel", "yogur", "cereal", "galleta", "pastel", "tarta", "helado", "chocolate", "bocadillo", "tapa"],
+    "OBJETO_PEQUEÑO_PORTABLE": ["libro", "llave", "teléfono", "móvil", "dinero", "maleta", "pasaporte", "mochila", "cuaderno", "bolsa", "bolso", "caja", "ticket", "recibo", "factura", "tarjeta", "producto", "pedido", "visa", "reloj", "gafas", "sombrero", "guantes", "bufanda", "cinturón", "cartera", "monedero", "paraguas", "periódico", "revista", "cuadro", "cámara", "radio", "lámpara", "cojín", "manta", "almohada", "sábana", "toalla", "jabón", "cepillo", "peine", "tijeras", "pegamento", "pintura", "pincel", "lienzo", "taza", "vaso", "plato"],
+    "MUEBLE_HOGAR": ["mesa", "cama", "silla", "sofá", "estantería", "mesilla", "armario", "cómoda"],
+    "LUGAR_INTERIOR": ["casa", "piso", "habitación", "salón", "cocina", "baño", "dormitorio", "comedor", "pasillo", "recibidor", "sótano", "ático", "terraza", "patio", "garaje", "trastero"],
+    "LUGAR_EXTERIOR": ["jardín", "balcón", "ciudad", "pueblo", "calle", "plaza", "avenida", "parque", "playa", "montaña"],
+    "LUGAR_PUBLICO": ["oficina", "tienda", "hospital", "restaurante", "bar", "cine", "museo", "teatro", "estación", "aeropuerto", "puerto", "escuela", "universidad", "biblioteca", "supermercado", "banco", "hotel", "mercado", "iglesia", "consulta", "gimnasio", "farmacia"],
+    "PARTE_CASA": ["puerta", "ventana", "pared", "suelo", "techo", "escalera", "ascensor"],
+    "ELECTRODOMESTICO": ["ordenador", "televisión", "lavadora", "nevera", "microondas", "aspiradora", "plancha"],
+    "PROFESION": ["médico", "profesor", "ingeniero", "estudiante", "abogado", "arquitecto", "cocinero", "enfermero", "policía", "bombero", "periodista", "actor", "cantante", "deportista", "escritor", "piloto", "científico", "programador", "diseñador", "fotógrafo", "traductor", "guía", "recepcionista", "vendedor", "camarero", "conductor", "mecánico", "electricista", "fontanero", "carpintero", "pintor", "jardinero", "peluquero", "maestro", "director", "gerente", "jefe", "empleado", "empresario", "comerciante"],
+    "NACIONALIDAD": ["español", "francés", "inglés", "alemán", "italiano", "portugués", "ruso", "chino", "japonés", "coreano", "árabe", "brasileño", "mexicano", "argentino", "colombiano", "venezolano", "chileno", "peruano", "ecuatoriano", "boliviano", "paraguayo", "uruguayo", "cubano", "dominicano", "estadounidense", "canadiense", "australiano", "indio", "turco", "griego", "polaco", "checo", "húngaro", "rumano", "croata"],
+    "PERSONA": ["padre", "madre", "hijo", "hija", "hermano", "hermana", "amigo", "amiga", "abuelo", "abuela", "tío", "tía", "primo", "prima", "novio", "novia", "esposo", "esposa", "compañero", "compañera", "vecino", "vecina", "colega", "jefe", "jefa"],
+    "ACTIVIDAD": ["deporte", "fútbol", "baloncesto", "tenis", "natación", "música", "canción", "baile", "paseo", "viaje", "excursión", "camping", "pesca", "caza", "ciclismo", "senderismo", "escalada", "esquí", "surf", "yoga", "meditación", "lectura", "escritura", "pintura", "fotografía", "cocina", "jardinería", "manualidades", "colección", "voluntariado", "juego", "ajedrez", "cartas", "videojuego", "película", "serie", "programa", "documental", "concierto", "festival", "feria", "mercadillo", "exposición", "obra", "teatro", "danza", "ópera", "comedia", "drama", "tragedia"],
+    "TRANSPORTE": ["coche", "moto", "bicicleta", "tren", "metro", "autobús", "avión", "barco", "taxi", "tranvía"],
+    "TIEMPO": ["mañana", "tarde", "noche", "día", "semana", "mes", "año", "hoy", "ayer", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo", "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre", "primavera", "verano", "otoño", "invierno", "momento", "instante", "época", "período", "etapa", "fase", "ciclo", "rato", "tiempo"],
+    "LUGAR_TRABAJO": ["trabajo", "oficina", "tienda", "empresa", "fábrica", "taller"]
+  },
+
+  "verb_restrictions": {
+    "tener": {
+      "accept": ["OBJETO_PEQUEÑO_PORTABLE", "MUEBLE_HOGAR", "ELECTRODOMESTICO", "LUGAR_INTERIOR", "LUGAR_EXTERIOR", "TRANSPORTE", "PERSONA", "PROFESION"],
+      "reject_combinations": [
+        { "verb": "tener", "tag": "PARTE_CASA", "reason": "No se 'tiene' una pared o techo" },
+        { "verb": "tener", "tag": "CONSUMIBLE_BEBIDA", "reason": "'Tener agua' es posible pero forzado; mejor 'beber agua'" },
+        { "verb": "tener", "tag": "CONSUMIBLE_COMIDA", "reason": "'Tener pan' es posible pero forzado; mejor 'comer pan'" }
+      ]
+    },
+    "usar": {
+      "accept": ["OBJETO_PEQUEÑO_PORTABLE", "ELECTRODOMESTICO", "MUEBLE_HOGAR", "TRANSPORTE"],
+      "reject_combinations": [
+        { "verb": "usar", "tag": "CONSUMIBLE_BEBIDA", "reason": "Se bebe, no se 'usa'" },
+        { "verb": "usar", "tag": "CONSUMIBLE_COMIDA", "reason": "Se come, no se 'usa'" },
+        { "verb": "usar", "tag": "LUGAR_INTERIOR", "reason": "Se 'está en' un lugar, no se 'usa'" },
+        { "verb": "usar", "tag": "LUGAR_EXTERIOR", "reason": "Se 'está en' un lugar, no se 'usa'" },
+        { "verb": "usar", "tag": "PARTE_CASA", "reason": "Se 'abre/cierra/limpia', no se 'usa' una puerta" }
+      ]
+    },
+    "limpiar": {
+      "accept": ["MUEBLE_HOGAR", "ELECTRODOMESTICO", "LUGAR_INTERIOR", "LUGAR_EXTERIOR", "OBJETO_PEQUEÑO_PORTABLE", "TRANSPORTE", "PARTE_CASA"],
+      "reject_combinations": [
+        { "verb": "limpiar", "tag": "CONSUMIBLE_BEBIDA", "reason": "No se limpia una bebida" },
+        { "verb": "limpiar", "tag": "CONSUMIBLE_COMIDA", "reason": "No se limpia una comida" },
+        { "verb": "limpiar", "tag": "PERSONA", "reason": "Se 'lava' a una persona, no se 'limpia'" }
+      ]
+    },
+    "lavar": {
+      "accept": ["OBJETO_PEQUEÑO_PORTABLE", "MUEBLE_HOGAR", "ELECTRODOMESTICO", "CONSUMIBLE_COMIDA", "CONSUMIBLE_BEBIDA"],
+      "reject_combinations": [
+        { "verb": "lavar", "tag": "LUGAR_INTERIOR", "reason": "Se 'limpia' un lugar, no se 'lava'" },
+        { "verb": "lavar", "tag": "LUGAR_EXTERIOR", "reason": "Se 'limpia' un lugar, no se 'lava'" },
+        { "verb": "lavar", "tag": "TRANSPORTE", "reason": "Posible pero poco natural; mejor 'limpiar el coche'" }
+      ]
+    },
+    "comer": {
+      "accept": ["CONSUMIBLE_COMIDA"],
+      "reject_combinations": [
+        { "verb": "comer", "tag": "CONSUMIBLE_BEBIDA", "reason": "Se bebe, no se come" },
+        { "verb": "comer", "tag": "OBJETO_PEQUEÑO_PORTABLE", "reason": "No se come un libro" },
+        { "verb": "comer", "tag": "LUGAR_INTERIOR", "reason": "No se come una casa" }
+      ]
+    },
+    "beber": {
+      "accept": ["CONSUMIBLE_BEBIDA"],
+      "reject_combinations": [
+        { "verb": "beber", "tag": "CONSUMIBLE_COMIDA", "reason": "Se come, no se bebe" },
+        { "verb": "beber", "tag": "OBJETO_PEQUEÑO_PORTABLE", "reason": "No se bebe un libro" }
+      ]
+    },
+    "trabajar": {
+      "accept": ["LUGAR_PUBLICO", "LUGAR_INTERIOR", "LUGAR_TRABAJO"],
+      "reject_combinations": [
+        { "verb": "trabajar", "tag": "CONSUMIBLE_COMIDA", "reason": "No se trabaja una comida" },
+        { "verb": "trabajar", "tag": "OBJETO_PEQUEÑO_PORTABLE", "reason": "No se trabaja un objeto" },
+        { "verb": "trabajar", "tag": "PARTE_CASA", "reason": "No se trabaja una puerta" }
+      ]
+    },
+    "vivir": {
+      "accept": ["LUGAR_INTERIOR", "LUGAR_EXTERIOR", "LUGAR_PUBLICO", "CIUDAD", "PAIS"],
+      "reject_combinations": [
+        { "verb": "vivir", "tag": "CONSUMIBLE_COMIDA", "reason": "No se vive una comida" },
+        { "verb": "vivir", "tag": "OBJETO_PEQUEÑO_PORTABLE", "reason": "No se vive un libro" }
+      ]
+    },
+    "ir": {
+      "accept": ["LUGAR_INTERIOR", "LUGAR_EXTERIOR", "LUGAR_PUBLICO", "LUGAR_TRABAJO"],
+      "reject_combinations": [
+        { "verb": "ir", "tag": "CONSUMIBLE_COMIDA", "reason": "No se va a una comida" },
+        { "verb": "ir", "tag": "OBJETO_PEQUEÑO_PORTABLE", "reason": "No se va a un libro" }
+      ]
+    },
+    "hablar": {
+      "accept": ["NACIONALIDAD", "IDIOMA"],
+      "reject_combinations": [
+        { "verb": "hablar", "tag": "CONSUMIBLE_COMIDA", "reason": "No se habla una comida" }
+      ]
+    },
+    "mirar": {
+      "accept": ["OBJETO_PEQUEÑO_PORTABLE", "MUEBLE_HOGAR", "ELECTRODOMESTICO", "PARTE_CASA", "PERSONA"],
+      "reject_combinations": [
+        { "verb": "mirar", "tag": "CONSUMIBLE_COMIDA", "reason": "No se mira una comida (se come)" },
+        { "verb": "mirar", "tag": "LUGAR_INTERIOR", "reason": "Se 'está en' un lugar, no se 'mira'" }
+      ]
+    },
+    "escuchar": {
+      "accept": ["MUSICA", "PERSONA", "RUIDO"],
+      "reject_combinations": [
+        { "verb": "escuchar", "tag": "CONSUMIBLE_COMIDA", "reason": "No se escucha una comida" },
+        { "verb": "escuchar", "tag": "LUGAR_INTERIOR", "reason": "No se escucha una casa" }
+      ]
+    },
+    "comprar": {
+      "accept": ["OBJETO_PEQUEÑO_PORTABLE", "MUEBLE_HOGAR", "ELECTRODOMESTICO", "CONSUMIBLE_COMIDA", "CONSUMIBLE_BEBIDA", "TRANSPORTE"],
+      "reject_combinations": [
+        { "verb": "comprar", "tag": "LUGAR_INTERIOR", "reason": "No se compra una casa (o sí, pero es avanzado)" },
+        { "verb": "comprar", "tag": "PERSONA", "reason": "No se compra una persona" }
+      ]
+    },
+    "leer": {
+      "accept": ["LIBRO", "PERIODICO", "REVISTA", "CARTA", "MENSAJE", "DOCUMENTO"],
+      "reject_combinations": [
+        { "verb": "leer", "tag": "CONSUMIBLE_COMIDA", "reason": "No se lee una comida" },
+        { "verb": "leer", "tag": "LUGAR_INTERIOR", "reason": "No se lee una casa" }
+      ]
+    },
+    "escribir": {
+      "accept": ["LIBRO", "CARTA", "MENSAJE", "CORREO", "DOCUMENTO", "TEXTO"],
+      "reject_combinations": [
+        { "verb": "escribir", "tag": "CONSUMIBLE_COMIDA", "reason": "No se escribe una comida" }
+      ]
+    },
+    "estudiar": {
+      "accept": ["LENGUAJE", "ASIGNATURA", "CARRERA", "LIBRO", "TEMA"],
+      "reject_combinations": [
+        { "verb": "estudiar", "tag": "CONSUMIBLE_COMIDA", "reason": "No se estudia una comida" },
+        { "verb": "estudiar", "tag": "LUGAR_INTERIOR", "reason": "No se estudia una casa" }
+      ]
+    }
+  }
+}

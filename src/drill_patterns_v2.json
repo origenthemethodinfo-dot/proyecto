@@ -1,0 +1,246 @@
+{
+  "version": "1.0",
+  "description": "Patrones de drill tipados. Cada patrón tiene slots con lista blanca de vocabulario válido.",
+
+  "slots": {
+    "OBJETO_POSEIBLE": ["libro", "llave", "teléfono", "móvil", "dinero", "coche", "casa", "trabajo", "maleta", "pasaporte", "ordenador", "sofá", "mochila", "cuaderno", "bolsa", "plato", "taza", "vaso", "camisa", "abrigo", "zapato", "vestido", "camiseta", "pantalón", "chaqueta", "zapatilla", "calcetines", "bolso", "caja", "ticket", "recibo", "factura", "tarjeta", "producto", "pedido", "visa", "reloj", "gafas", "sombrero", "guantes", "bufanda", "cinturón", "cartera", "monedero", "paraguas", "periódico", "revista", "cuadro", "espejo", "lámpara", "alfombra", "cortina", "cojín", "manta", "almohada", "sábana", "toalla", "jabón", "cepillo", "peine", "tijeras", "pegamento", "pintura", "pincel", "lienzo", "cámara", "radio", "televisión", "puerta", "ventana", "mesilla", "estantería", "reloj", "calendario", "agenda", "diario", "bolígrafo", "lápiz", "goma", "regla", "compass", "mochila", "cartera", "monedero", "llavero", "agua", "jardín", "piso", "mesa", "cama", "silla", "luz", "baño", "salón", "pared", "suelo", "techo", "cocina", "tenedor", "cuchara", "cuchillo", "habitación", "ropa", "basura", "balcón", "garaje", "edificio", "ascensor", "escalera", "botella", "fruta", "verdura", "carne", "pescado", "pollo", "huevo", "queso", "arroz", "pasta", "pan", "azúcar", "sal", "aceite", "mantequilla", "mermelada", "miel", "yogur", "cereal", "galleta", "pastel", "tarta", "helado", "chocolate", "bocadillo", "tapa"],
+
+    "LUGAR_UBICACION": ["casa", "trabajo", "oficina", "tienda", "baño", "salón", "cocina", "habitación", "jardín", "balcón", "garaje", "ciudad", "pueblo", "calle", "plaza", "avenida", "parque", "playa", "montaña", "gimnasio", "hospital", "farmacia", "restaurante", "bar", "cine", "museo", "teatro", "estación", "aeropuerto", "puerto", "escuela", "universidad", "biblioteca", "supermercado", "banco", "hotel", "mercado", "iglesia", "consulta", "comedor", "pasillo", "recibidor", "terraza", "patio", "sótano", "ático"],
+
+    "PROFESION": ["médico", "profesor", "ingeniero", "estudiante", "abogado", "arquitecto", "cocinero", "enfermero", "policía", "bombero", "periodista", "actor", "cantante", "deportista", "escritor", "piloto", "científico", "programador", "diseñador", "fotógrafo", "traductor", "guía", "recepcionista", "vendedor", "camarero", "conductor", "mecánico", "electricista", "fontanero", "carpintero", "pintor", "jardinero", "peluquero", "maestro", "director", "gerente", "jefe", "empleado", "empresario", "comerciante"],
+
+    "NACIONALIDAD": ["español", "francés", "inglés", "alemán", "italiano", "portugués", "ruso", "chino", "japonés", "coreano", "árabe", "brasileño", "mexicano", "argentino", "colombiano", "venezolano", "chileno", "peruano", "ecuatoriano", "boliviano", "paraguayo", "uruguayo", "cubano", "dominicano", "estadounidense", "canadiense", "australiano", "indio", "turco", "griego", "polaco", "checo", "húngaro", "rumano", "croata"],
+
+    "ALIMENTO": ["pan", "carne", "pescado", "arroz", "pasta", "huevo", "queso", "pollo", "verdura", "fruta", "ensalada", "sopa", "azúcar", "sal", "aceite", "mantequilla", "mermelada", "miel", "yogur", "cereal", "galleta", "pastel", "tarta", "helado", "chocolate", "bocadillo", "tapa", "cena", "desayuno", "comida", "almuerzo", "merienda"],
+
+    "BEBIDA": ["agua", "café", "té", "leche", "vino", "cerveza", "zumo", "refresco"],
+
+    "PERSONA_FAMILIAR": ["padre", "madre", "hijo", "hija", "hermano", "hermana", "amigo", "amiga", "abuelo", "abuela", "tío", "tía", "primo", "prima", "novio", "novia", "esposo", "esposa", "compañero", "compañera", "vecino", "vecina", "colega", "jefe", "jefa"],
+
+    "ACTIVIDAD": ["deporte", "fútbol", "baloncesto", "tenis", "natación", "música", "canción", "baile", "paseo", "viaje", "excursión", "camping", "pesca", "caza", "ciclismo", "senderismo", "escalada", "esquí", "surf", "yoga", "meditación", "lectura", "escritura", "pintura", "fotografía", "cocina", "jardinería", "manualidades", "colección", "voluntariado", "juego", "ajedrez", "cartas", "videojuego", "película", "serie", "programa", "documental", "concierto", "festival", "feria", "mercadillo", "exposición", "obra", "teatro", "danza", "ópera", "zarzuela", "musical", "comedia", "drama", "tragedia"],
+
+    "TRANSPORTE": ["coche", "moto", "bicicleta", "tren", "metro", "autobús", "avión", "barco", "taxi", "tranvía", "ferrocarril", "autocar", "camión", "furgoneta", "caravana", "remolque", "patinete", "monopatín", "skate", "roller", "patines"],
+
+    "TIEMPO": ["mañana", "tarde", "noche", "día", "semana", "mes", "año", "hoy", "ayer", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo", "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre", "primavera", "verano", "otoño", "invierno", "momento", "instante", "época", "período", "etapa", "fase", "ciclo", "rato", "tiempo"]
+  },
+
+  "patterns": {
+    "poseer": {
+      "name": "TENER",
+      "description": "Verbo tener + objeto poseíble",
+      "blocks": [
+        {
+          "title": "1. VERBO TENER",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Tengo {art} {noun}.", "template_en": "I have {art_en} {noun_en}.", "slot": "OBJETO_POSEIBLE", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No tengo {art} {noun}.", "template_en": "I don't have {art_en} {noun_en}.", "slot": "OBJETO_POSEIBLE", "article": "definite" }
+          ]
+        },
+        {
+          "title": "3. PRONOMBRE LO / LA",
+          "accent": "mostaza",
+          "rows": [
+            { "template_es": "Lo tengo.", "template_en": "I have it (masc).", "slot": null },
+            { "template_es": "La tengo.", "template_en": "I have it (fem).", "slot": null }
+          ]
+        }
+      ]
+    },
+
+    "ubicar": {
+      "name": "ESTAR",
+      "description": "Verbo estar + lugar",
+      "blocks": [
+        {
+          "title": "1. VERBO ESTAR",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Estoy en {art} {noun}.", "template_en": "I'm at {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No estoy en {art} {noun}.", "template_en": "I'm not at {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        }
+      ]
+    },
+
+    "identidad_profesion": {
+      "name": "SER (profesión)",
+      "description": "Verbo ser + profesión",
+      "blocks": [
+        {
+          "title": "1. VERBO SER",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Soy {noun}.", "template_en": "I'm {art_en} {noun_en}.", "slot": "PROFESION", "article": "indefinite_en" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No soy {noun}.", "template_en": "I'm not {art_en} {noun_en}.", "slot": "PROFESION", "article": "indefinite_en" }
+          ]
+        }
+      ]
+    },
+
+    "identidad_nacionalidad": {
+      "name": "SER (nacionalidad)",
+      "description": "Verbo ser + nacionalidad",
+      "blocks": [
+        {
+          "title": "1. VERBO SER",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Soy {noun}.", "template_en": "I'm {noun_en}.", "slot": "NACIONALIDAD", "article": "none" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No soy {noun}.", "template_en": "I'm not {noun_en}.", "slot": "NACIONALIDAD", "article": "none" }
+          ]
+        }
+      ]
+    },
+
+    "comer": {
+      "name": "COMER",
+      "description": "Verbo comer + alimento",
+      "blocks": [
+        {
+          "title": "1. VERBO COMER",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Como {art} {noun}.", "template_en": "I eat {art_en} {noun_en}.", "slot": "ALIMENTO", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No como {art} {noun}.", "template_en": "I don't eat {art_en} {noun_en}.", "slot": "ALIMENTO", "article": "definite" }
+          ]
+        }
+      ]
+    },
+
+    "beber": {
+      "name": "BEBER",
+      "description": "Verbo beber + bebida",
+      "blocks": [
+        {
+          "title": "1. VERBO BEBER",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Bebo {art} {noun}.", "template_en": "I drink {art_en} {noun_en}.", "slot": "BEBIDA", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No bebo {art} {noun}.", "template_en": "I don't drink {art_en} {noun_en}.", "slot": "BEBIDA", "article": "definite" }
+          ]
+        }
+      ]
+    },
+
+    "trabajar": {
+      "name": "TRABAJAR",
+      "description": "Verbo trabajar + lugar",
+      "blocks": [
+        {
+          "title": "1. VERBO TRABAJAR",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Trabajo en {art} {noun}.", "template_en": "I work at {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No trabajo en {art} {noun}.", "template_en": "I don't work at {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        }
+      ]
+    },
+
+    "vivir": {
+      "name": "VIVIR",
+      "description": "Verbo vivir + lugar",
+      "blocks": [
+        {
+          "title": "1. VERBO VIVIR",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Vivo en {art} {noun}.", "template_en": "I live in {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No vivo en {art} {noun}.", "template_en": "I don't live in {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        }
+      ]
+    },
+
+    "ir": {
+      "name": "IR",
+      "description": "Verbo ir + lugar",
+      "blocks": [
+        {
+          "title": "1. VERBO IR",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Voy a {art} {noun}.", "template_en": "I'm going to {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No voy a {art} {noun}.", "template_en": "I'm not going to {art_en} {noun_en}.", "slot": "LUGAR_UBICACION", "article": "definite" }
+          ]
+        }
+      ]
+    },
+
+    "gustar": {
+      "name": "GUSTAR",
+      "description": "Verbo gustar + actividad/cosa",
+      "blocks": [
+        {
+          "title": "1. VERBO GUSTAR",
+          "accent": "granate",
+          "rows": [
+            { "template_es": "Me gusta {art} {noun}.", "template_en": "I like {art_en} {noun_en}.", "slot": "ACTIVIDAD", "article": "definite" }
+          ]
+        },
+        {
+          "title": "2. NEGACIÓN",
+          "accent": "carbon",
+          "rows": [
+            { "template_es": "No me gusta {art} {noun}.", "template_en": "I don't like {art_en} {noun_en}.", "slot": "ACTIVIDAD", "article": "definite" }
+          ]
+        }
+      ]
+    }
+  }
+}
